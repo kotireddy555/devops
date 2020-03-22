@@ -56,7 +56,7 @@ mknod /dev/kmsg c 1 11
 # To be executed only on master nodes #
 #######################################
 
-if [[ $(hostname) =~ .*master.* ]]
+if [[ $(hostname) =~ .*k8master.* ]]
 then
 
   # Initialize Kubernetes
@@ -83,7 +83,7 @@ fi
 # To be executed only on worker nodes #
 #######################################
 
-if [[ $(hostname) =~ .*worker.* ]]
+if [[ $(hostname) =~ .*k8worker.* ]]
 then
 
   # Join worker nodes to the Kubernetes cluster
